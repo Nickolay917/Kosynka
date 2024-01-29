@@ -1,10 +1,10 @@
 const naipes = ['♠', '♣', '♥', '♦'];
 const numeros = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-const koloda = [];
+const fullKoloda = [];
 
 for (let naipe of naipes) {
     for (let numero of numeros) {
-        koloda.push(numero + naipe);
+        fullKoloda.push(numero + naipe);
     }
 }
 
@@ -22,5 +22,16 @@ function shuffle(array) {
     return array;
 }
 // Used like so
-shuffle(koloda);
+shuffle(fullKoloda);
+
+let koloda = [],
+    emptyCards = [];
+
+
+for (let i = 0; i < 24; i++) {
+    koloda[i] = fullKoloda[i]
+}
+for (let a = 24; a < 52; a++) {
+    emptyCards[a] = fullKoloda[a];
+}
 
