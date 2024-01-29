@@ -41,7 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const reversCard = document.querySelector(".reversCard");
 
     kolodaButton.addEventListener("click", function () {
-        
+        reversCard.push(a.shift())
+        function displayReversCard() {
+            
+        }
     });
 
     reversCard.addEventListener("click", function () {
