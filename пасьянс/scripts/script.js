@@ -25,6 +25,7 @@ function shuffle(array) {
 shuffle(fullKoloda);
 
 let koloda = [],
+    reversCard = [],
     emptyCards = [];
 
 
@@ -35,3 +36,16 @@ for (let a = 24; a < 52; a++) {
     emptyCards[a] = fullKoloda[a];
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const kolodaButton = document.querySelector(".kolodaButton");
+    const reversCard = document.querySelector(".reversCard");
+
+    kolodaButton.addEventListener("click", function () {
+        
+    });
+
+    reversCard.addEventListener("click", function () {
+        // Логика для обработки клика на перевернутую карту
+        alert("Клик на перевернутую карту!");
+    });
+});
