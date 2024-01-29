@@ -36,19 +36,18 @@ for (let a = 24; a < 52; a++) {
     emptyCards[a] = fullKoloda[a];
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const kolodaButton = document.querySelector(".kolodaButton");
-    const reversCard = document.querySelector(".reversCard");
+function displayReversCard() {
+    const reversCards = document.getElementById('reversCard');
+    if (koloda.length != 0) {
+        reversCard.push(koloda.shift())
+        reversCards.innerText = reversCard[reversCard.length - 1];
+    } else {
+        koloda = reversCard;
+        reversCard = [];
+        reversCards.innerText = "";
+    }
+    }
 
-    kolodaButton.addEventListener("click", function () {
-        reversCard.push(a.shift())
-        function displayReversCard() {
-            
-        }
-    });
 
-    reversCard.addEventListener("click", function () {
-        // Логика для обработки клика на перевернутую карту
-        alert("Клик на перевернутую карту!");
-    });
-});
+document.getElementById("kolodaButton").addEventListener("click", displayReversCard);
+
